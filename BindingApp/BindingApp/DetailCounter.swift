@@ -32,6 +32,7 @@ struct DetailCounter: View {
                     .font(.system(size: 280))
                     .foregroundColor(.brown)
                     .contentTransition(.numericText(value: Double(counter))) // * Step 1 *
+                    .animation(.easeInOut(duration: 0.1), value: counter) // * Step 2 *
                 
                 Divider()
                     .padding()
@@ -39,11 +40,8 @@ struct DetailCounter: View {
                 SumButton(counter: $counter)
             }
             .padding()
-            .animation(.easeInOut(duration: 0.1), value: counter) // * Step 2 *
         }
     }
-    
-   
 }
 
 struct DetailCounter_Previews: PreviewProvider {
