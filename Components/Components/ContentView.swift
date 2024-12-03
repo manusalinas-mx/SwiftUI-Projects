@@ -20,10 +20,7 @@ struct ContentView: View {
             }
             .font(.title3)
             .listStyle(.grouped)
-            .navigationTitle("Navigation Stack")
-            .toolbarBackground(Color.blue, for: .navigationBar)
-            .toolbarColorScheme(.dark, for: .navigationBar)
-            .toolbarBackground(.visible, for: .navigationBar)
+            .modifier(CustomNavigationBarStyle(title: "Navigation Stack", inLine: false))
         }
     }
 

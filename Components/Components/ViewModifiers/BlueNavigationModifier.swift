@@ -1,19 +1,17 @@
 //
-//  BlueNavigationModifier.swift
-//  Components
-//
-//  Created by Manuel Salinas on 11/21/23.
+//  CustomNavigationBarStyle.swift
 //
 
 import SwiftUI
 
-struct NavigationStyledModifier: ViewModifier {
+struct CustomNavigationBarStyle: ViewModifier {
     var title: String?
+    var inLine: Bool = true
 
     func body(content: Content) -> some View {
         content
             .navigationTitle(title ?? "")
-            .toolbarTitleDisplayMode(.inline)
+            .toolbarTitleDisplayMode(inLine ?  .inline : .automatic)
             .toolbarBackground(Color.blue, for: .navigationBar)
             .toolbarColorScheme(.dark, for: .navigationBar)
             .toolbarBackground(.visible, for: .navigationBar)

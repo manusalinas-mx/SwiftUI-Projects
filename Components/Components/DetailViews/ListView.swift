@@ -23,7 +23,7 @@ struct ListView: View {
                 Text("Footer").font(.footnote)
             }
         }
-        .modifier(NavigationStyledModifier(title: title))
+        .modifier(CustomNavigationBarStyle(title: title))
     }
 }
 

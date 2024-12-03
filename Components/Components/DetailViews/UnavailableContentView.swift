@@ -30,7 +30,7 @@ struct UnavailableContentView: View {
             .buttonStyle(.bordered)
             .foregroundStyle(.indigo)
         }
-        .modifier(NavigationStyledModifier())
+        .modifier(CustomNavigationBarStyle(title: "Empty State"))
         .padding()
     }
 }

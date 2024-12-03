@@ -24,7 +24,7 @@ struct GroupBoxView: View {
         }
         .font(.title2)
         .padding(.horizontal)
-        .modifier(NavigationStyledModifier(title: title))
+        .modifier(CustomNavigationBarStyle(title: title))
     }
 }
 

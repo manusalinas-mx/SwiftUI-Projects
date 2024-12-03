@@ -81,7 +81,7 @@ struct ButtonsView: View {
             }
 
         }
-        .modifier(NavigationStyledModifier(title: title))
+        .modifier(CustomNavigationBarStyle(title: title))
         .padding()
     }
 }
