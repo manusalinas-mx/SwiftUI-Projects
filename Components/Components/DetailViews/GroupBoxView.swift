@@ -9,22 +9,36 @@ import SwiftUI
 
 struct GroupBoxView: View {
     var title: String?
-    
+
     @State private var username = ""
     @State private var password = ""
 
     var body: some View {
 
-        GroupBox {
-            Text("Login")
+        VStack {
+            GroupBox {
+                Text("Login")
+                
+                TextField("Username", text: $username)
+                    .textFieldStyle(.roundedBorder)
+                
+                SecureField("Password", text: $password)
+                    .textFieldStyle(.roundedBorder)
+            }
+            .font(.title2)
+            .padding(.horizontal)
+            .modifier(CustomNavigationBarStyle(title: title))
 
-            TextField("Username", text: $username)                    .textFieldStyle(.roundedBorder)
+            Spacer()
+                .frame(height: 20)
 
-            SecureField("Password", text: $password)                    .textFieldStyle(.roundedBorder)
+            Group {
+                Text(username)
+                Text(password)
+            }
+
+            Spacer()
         }
-        .font(.title2)
-        .padding(.horizontal)
-        .modifier(CustomNavigationBarStyle(title: title))
     }
 }
 
