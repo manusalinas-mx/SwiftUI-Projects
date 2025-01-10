@@ -11,6 +11,7 @@ struct CardView: View {
     // MARK: Properties
     @State private var imageNumber: Int = 1
     @State private var randomNumber: Int = 1
+    @State private var showSheet: Bool = false
 
     // MARK: Functions
     func randomImage() {
@@ -27,7 +28,7 @@ struct CardView: View {
             CustomBackgroundView()
 
             VStack {
-                // MARK: Header
+                // MARK: - Header
 
                 VStack(alignment: .leading) {
                     HStack {
@@ -48,8 +49,13 @@ struct CardView: View {
 
                         Button {
                             // action...
+                            showSheet.toggle()
                         } label: {
                             CustomButtonView()
+                        }
+                        .sheet(isPresented: $showSheet) {
+                            SettingsView()
+                                .presentationDetents([.large, .medium])
                         }
 
                     }
@@ -61,7 +67,7 @@ struct CardView: View {
                 }
                 .padding(.horizontal, 30)
 
-                // MARK: Main Content
+                // MARK: - Main Content
                 ZStack {
                     CustomCircleView()
 
@@ -71,7 +77,7 @@ struct CardView: View {
                         .animation(.default, value: imageNumber)
                 }
 
-                // MARK: Footer
+                // MARK: - Footer
                 Button {
                     // Code...
                     randomImage()

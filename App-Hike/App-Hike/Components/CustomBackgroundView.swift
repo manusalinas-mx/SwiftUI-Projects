@@ -18,7 +18,7 @@ struct CustomBackgroundView: View {
             // 2. Light
             Color(.colorGreenLight)
                 .cornerRadius(40)
-                .offset(y: 3)
+                .offset(y: 4)
                 .opacity(0.85)
 
             // 1. Surface
