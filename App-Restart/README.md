@@ -20,6 +20,6 @@ We will create such a custom button with complex gestures that we can not find i
 **PARALLAX EFFECT**
 By using multiple movements in the opposite direction (parallax effect), we can add depth to this amazing onboarding screen.
 
-
-
 --- 
+
+![restart](https://github.com/user-attachments/assets/12658719-c015-43f5-92b9-47d904c8e0bf)
