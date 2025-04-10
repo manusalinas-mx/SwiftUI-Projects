@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		324CD0E82DA882D300FDDE5E /* ListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324CD0E72DA882D300FDDE5E /* ListRowView.swift */; };
+		324CD0EA2DA8848000FDDE5E /* ImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324CD0E92DA8848000FDDE5E /* ImageDetailView.swift */; };
+		324CD0EC2DA8853900FDDE5E /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324CD0EB2DA8853900FDDE5E /* EmptyStateView.swift */; };
 		FFAADD222A1E5B0600597E38 /* NavigationSplitViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAADD212A1E5B0600597E38 /* NavigationSplitViewApp.swift */; };
 		FFAADD262A1E5B0700597E38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFAADD252A1E5B0700597E38 /* Assets.xcassets */; };
 		FFAADD292A1E5B0700597E38 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFAADD282A1E5B0700597E38 /* Preview Assets.xcassets */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		324CD0E72DA882D300FDDE5E /* ListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowView.swift; sourceTree = "<group>"; };
+		324CD0E92DA8848000FDDE5E /* ImageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailView.swift; sourceTree = "<group>"; };
+		324CD0EB2DA8853900FDDE5E /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		FFAADD1E2A1E5B0600597E38 /* NavigationSplitView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationSplitView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFAADD212A1E5B0600597E38 /* NavigationSplitViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationSplitViewApp.swift; sourceTree = "<group>"; };
 		FFAADD252A1E5B0700597E38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +44,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		324CD0E62DA8828700FDDE5E /* Reusables */ = {
+			isa = PBXGroup;
+			children = (
+				324CD0E92DA8848000FDDE5E /* ImageDetailView.swift */,
+				324CD0E72DA882D300FDDE5E /* ListRowView.swift */,
+				324CD0EB2DA8853900FDDE5E /* EmptyStateView.swift */,
+			);
+			path = Reusables;
+			sourceTree = "<group>";
+		};
+		324CD0ED2DA88F1900FDDE5E /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				FFAADD322A1E605100597E38 /* MenuProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
 		FFAADD152A1E5B0600597E38 = {
 			isa = PBXGroup;
 			children = (
@@ -57,8 +81,10 @@
 		FFAADD202A1E5B0600597E38 /* NavigationSplitView */ = {
 			isa = PBXGroup;
 			children = (
-				FFAADD212A1E5B0600597E38 /* NavigationSplitViewApp.swift */,
+				324CD0ED2DA88F1900FDDE5E /* Provider */,
 				FFAADD2F2A1E5BB300597E38 /* Models */,
+				324CD0E62DA8828700FDDE5E /* Reusables */,
+				FFAADD212A1E5B0600597E38 /* NavigationSplitViewApp.swift */,
 				FFAADD342A1E614200597E38 /* TwoColumnSplitView.swift */,
 				FFAADD362A1E660600597E38 /* ThreeColumnSplitView.swift */,
 				FFAADD252A1E5B0700597E38 /* Assets.xcassets */,
@@ -79,7 +105,6 @@
 			isa = PBXGroup;
 			children = (
 				FFAADD302A1E5BC100597E38 /* MenuItem.swift */,
-				FFAADD322A1E605100597E38 /* MenuProvider.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -112,7 +137,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1630;
 				TargetAttributes = {
 					FFAADD1D2A1E5B0600597E38 = {
 						CreatedOnToolsVersion = 14.3;
@@ -155,10 +180,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFAADD312A1E5BC100597E38 /* MenuItem.swift in Sources */,
+				324CD0EA2DA8848000FDDE5E /* ImageDetailView.swift in Sources */,
+				324CD0EC2DA8853900FDDE5E /* EmptyStateView.swift in Sources */,
 				FFAADD332A1E605100597E38 /* MenuProvider.swift in Sources */,
 				FFAADD352A1E614200597E38 /* TwoColumnSplitView.swift in Sources */,
 				FFAADD372A1E660600597E38 /* ThreeColumnSplitView.swift in Sources */,
 				FFAADD222A1E5B0600597E38 /* NavigationSplitViewApp.swift in Sources */,
+				324CD0E82DA882D300FDDE5E /* ListRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,8 +227,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = D553RDKA55;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -259,8 +289,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = D553RDKA55;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -287,7 +319,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NavigationSplitView/Preview Content\"";
-				DEVELOPMENT_TEAM = D553RDKA55;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -295,6 +326,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,7 +348,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NavigationSplitView/Preview Content\"";
-				DEVELOPMENT_TEAM = D553RDKA55;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -324,6 +355,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
